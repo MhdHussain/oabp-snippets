@@ -1,0 +1,42 @@
+STARTUP
+======================
+- get the project from abp site
+- create the database
+- fix the connection strings
+- restore solution
+- update database for the entityframework project to create the tables
+	[ From the aspnet-core folder run -- dotnet ef database update -p src/Project.EntityFrameworkCore ]
+- run yarn inside angular
+- run the web.host project pointing to ef project
+	[ cd to the web.host run -- dotnet run -p . -s ../Project.EntityFrameworkCore ]
+- run the angular project
+
+=========================
+
+CREATING A PAGE
+=========================
+ ======= BACKEND ========
+- Disable Multitenency if not nencessary
+
+== ANGULAR ===
+- remove unnecessary menu items
+- add new menu item
+- create component for the page
+- add the new route to the app-routing-module
+
+======== BACKEND =========
+- add translation
+- create the entity
+- create dto with dtos for create and update
+- create the service with filterable request
+- create migration
+- migrate
+- create database seeder
+- seed the database
+========= ANGULR ==========
+- generate proxies using NSwag or apb cli
+- create component code utilizing  the generated service
+- generate component html code using code snippet and fill in the th and td using snippets
+- create modal component
+- generate modal component code from snippet
+- add necessary fields with appropriate field types
