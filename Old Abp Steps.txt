@@ -27,12 +27,15 @@ CREATING A PAGE
 ======== BACKEND =========
 - add translation
 - create the entity
-- create dto with dtos for create and update
-- create the service with filterable request
 - create migration
 - migrate
 - create database seeder
 - seed the database
+- create dto with dtos for create and update
+- create PagedEntityResultRequestDto which contains [keyword] == ONCE FOR THE WHOLE PROJECT
+- create the service extending asyncCrudAppService and pass the dtos with PagedEntityResultRequestDto
+- override CreateFilteredQuery using WhereIf to search for data with keyword
+
 ========= ANGULR ==========
 - generate proxies using NSwag or apb cli
 - create component code utilizing  the generated service
