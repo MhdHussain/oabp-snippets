@@ -27,17 +27,17 @@ CREATING A PAGE
 ======== BACKEND =========
 - add translation
 - create the entity
-- create migration
-- migrate
+- create migration [dotnet ef migrations add Books -p src/Project.EntityFrameworkCore ]
+- migrate [dotnet ef database update -p src/Project.EntityFrameworkCore]
 - create database seeder
 - seed the database
 - create dto with dtos for create and update
 - create PagedEntityResultRequestDto which contains [keyword] == ONCE FOR THE WHOLE PROJECT
-- create the service extending asyncCrudAppService and pass the dtos with PagedEntityResultRequestDto
+- create the service extending asyncCrudAppService and pass the dtos with PagedEntityResultRequestDto ==
 - override CreateFilteredQuery using WhereIf to search for data with keyword
 
 ========= ANGULR ==========
-- generate proxies using NSwag or apb cli
+- generate proxies using NSwag == from angular project nswag folder run ["../node_modules/.bin/nswag" run  ]
 - create component code utilizing  the generated service
 - generate component html code using code snippet and fill in the th and td using snippets
 - create modal component
